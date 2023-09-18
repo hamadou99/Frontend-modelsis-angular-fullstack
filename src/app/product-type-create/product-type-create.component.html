@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">Add Product Type</h1>
+            <form (ngSubmit)="createProductType()" class="form">
+              <div class="form-group">
+                <label for="productTypeName">Product Type Name</label>
+                <input type="text" class="form-control" id="productTypeName" [(ngModel)]="productType.name" name="productTypeName" required>
+              </div>
+              <div class="text-center">
+                <button routerLink="/index.html" class="btn btn-secondary cancel-button">Cancel</button>
+                <button type="submit" class="btn btn-primary save-button">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

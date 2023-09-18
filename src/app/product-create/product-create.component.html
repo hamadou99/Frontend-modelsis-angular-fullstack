@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center vh-100">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center">Add Product</h1>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="createProduct()" class="form">
+              <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" [(ngModel)]="productWithType.productName" name="productName" id="productName" required class="form-control">
+              </div><br>
+              <div class="form-group">
+                <label for="productType">Product Type</label>
+                <select [(ngModel)]="productWithType.idProductType" name="productWithType.idProductType" id="productType" required class="form-control">
+                  <option *ngFor="let productType of productTypes" [value]="productType.id">
+                    {{ productType.name }}
+                  </option>
+                </select>
+              </div><br>
+              <div class="text-center">
+                <button routerLink="/index.html" class="btn btn-secondary">Cancel</button>&nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  
